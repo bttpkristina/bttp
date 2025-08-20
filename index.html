@@ -71,7 +71,7 @@
     <a href="/" class="text-2xl font-druk text-mova-light">BTTP</a>
     <nav class="hidden md:flex space-x-6 text-mova-light font-neue">
       <a href="#home" class="hover:underline">Home</a>
-      <a href="#about" class="hover:underline">About</a>
+      <a href="about.html" class="hover:underline">About</a>
       <a href="#contact" class="hover:underline">Contact</a>
       <!-- <a href="#shop" class="hover:underline">Shop</a> -->
       <a href="#events" class="hover:underline">Events</a>
@@ -86,8 +86,8 @@
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden fixed inset-0 bg-mova-dark text-mova-light flex flex-col items-center justify-center space-y-8 font-neue">
-    <a href="#about" class="text-2xl">About</a>
     <a href="#home" class="text-2xl">Home</a>
+    <a href="about.html" class="text-2xl">About</a>
     <a href="#events" class="text-2xl">Events</a>
     <a href="#contact" class="text-2xl">Contact</a>
     <button id="close-menu" class="absolute top-6 right-6 text-3xl">✕</button>
@@ -105,7 +105,7 @@
 
   <!-- ABOUT -->
   <section id="about" class="py-20 px-6 md:px-20 text-center md:text-left bg-mova-beige text-mova-dark">
-    <div class="max-w-4xl mx-auto">
+    <div class="container mx-auto">
       <h2 class="text-4xl font-druk uppercase mb-6">About Us</h2>
       <p class="text-lg font-neue leading-relaxed">
         Dr. Wayne Johnson practices medicine on Hilton Head Island, SC. Through his years of practice he has developed a program to encourage and support people of all ages, and especially young people, in the pursuit of a Joyful Life. 
@@ -116,7 +116,7 @@
 
   <!-- EVENTS -->
   <section id="events" class="py-20 px-6 md:px-20 bg-mova-dark text-mova-light">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="container mx-auto text-center">
       <h2 class="text-4xl font-druk uppercase mb-12">Events</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-6 bg-mova-green rounded-lg shadow-lg">
@@ -135,43 +135,44 @@
     </div>
   </section>
 
-  <!-- SHOP -->
-  <!-- <section id="shop" class="py-20 px-6 md:px-20 bg-mova-beige text-mova-dark">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-druk uppercase mb-12">Shop</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow-lg">
-          <img src="https://placehold.co/300x200" class="rounded mb-4 mx-auto" />
-          <h3 class="text-xl font-neue">Craft Lager</h3>
-          <p class="text-gray-700 mt-2">Crisp and refreshing.</p>
-          <button class="mt-4 px-4 py-2 bg-mova-dark text-white rounded">Buy</button>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg">
-          <img src="https://placehold.co/300x200" class="rounded mb-4 mx-auto" />
-          <h3 class="text-xl font-neue">Hazy IPA</h3>
-          <p class="text-gray-700 mt-2">Juicy and hoppy.</p>
-          <button class="mt-4 px-4 py-2 bg-mova-dark text-white rounded">Buy</button>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow-lg">
-          <img src="https://placehold.co/300x200" class="rounded mb-4 mx-auto" />
-          <h3 class="text-xl font-neue">Dark Stout</h3>
-          <p class="text-gray-700 mt-2">Rich and smooth.</p>
-          <button class="mt-4 px-4 py-2 bg-mova-dark text-white rounded">Buy</button>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- CONTACT -->
   <section id="contact" class="py-20 px-6 md:px-20 bg-mova-beige text-mova-dark">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="container mx-auto text-center">
       <h2 class="text-4xl font-druk uppercase mb-6">Contact Us</h2>
-      <form class="grid gap-4 font-neue">
-        <input type="text" placeholder="Your Name" class="px-4 py-2 rounded text-black shadow-lg" />
-        <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black shadow-lg" />
-        <textarea placeholder="Message" rows="4" class="px-4 py-2 rounded text-black shadow-lg"></textarea>
-        <button type="submit" class="px-6 py-3 bg-mova-dark text-mova-light font-druk rounded">Send</button>
-      </form>
+
+      <div class="flex flex-row justify-between">
+
+        <div class="w-1/2 text-start">
+          <div class="w-[288px]">
+
+            <span class="flex flex-row gap-x-2 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+              <span>
+                <p>Hilton Head Health and Wellness</p>
+                <p>2 Marshland Road</p>
+                <p>Hilton Head Island, SC 29926</p>
+              </span>
+            </span>
+
+            <span class="flex flex-row gap-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+              <a href="tel:843-842-2900" class="text-decoration: underline">
+                843-842-2900
+              </a>
+            </span>
+          </div>
+        </div>
+        <form class="w-1/2 grid gap-4 font-neue">
+          <input type="text" placeholder="Your Name" class="px-4 py-2 rounded text-black shadow-lg" />
+          <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black shadow-lg" />
+          <textarea placeholder="Message" rows="4" class="px-4 py-2 rounded text-black shadow-lg"></textarea>
+          <button type="submit" class="px-6 py-3 bg-mova-dark text-mova-light font-druk rounded">Send</button>
+        </form>
+      </div>
     </div>
   </section>
 

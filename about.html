@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTTP</title>
+    <link rel="icon" href="/fav.png" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mova: {
+                            dark: "#193933",
+                            green: "#245949",
+                            beige: "#faf7f0",
+                            light: "#f7f6f3",
+                        },
+                    },
+                    fontFamily: {
+                        druk: ["DrukRegular", "sans-serif"],
+                        "druk-bold": ["DrukBold", "sans-serif"],
+                        neue: ["NeueRegular", "sans-serif"],
+                        "neue-light": ["NeueLight", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: "DrukRegular";
+            src: url("/_nuxt/fonts/DrukCyrMedium.4a5ea75.otf") format("opentype");
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "DrukBold";
+            src: url("/_nuxt/fonts/DrukCyrBold.02dd163.otf") format("opentype");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "NeueRegular";
+            src: url("/_nuxt/fonts/NeueHaasUnicaRegular.7192019.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "NeueLight";
+            src: url("/_nuxt/fonts/NeueHaasUnica-Light.16af902.ttf") format("truetype");
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body class="bg-mova-beige text-mova-dark font-neue flex flex-col min-h-screen">
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-20 bg-mova-dark px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-druk text-mova-light">BTTP</a>
+        <nav class="hidden md:flex space-x-6 text-mova-light font-neue">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+            <a href="#events" class="hover:underline">Events</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1">
+            <span class="w-6 h-0.5 bg-mova-light"></span>
+            <span class="w-6 h-0.5 bg-mova-light"></span>
+            <span class="w-6 h-0.5 bg-mova-light"></span>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-mova-dark text-mova-light flex flex-col items-center justify-center space-y-8 font-neue">
+        <a href="index.html" class="text-2xl">Home</a>
+        <a href="about.html" class="text-2xl">About</a>
+        <a href="#contact" class="text-2xl">Contact</a>
+        <a href="#events" class="text-2xl">Events</a>
+        <button id="close-menu" class="absolute top-6 right-6 text-3xl">✕</button>
+    </div>
+
+    <section class="grow">
+        <section id="about" class="py-20 px-6 md:px-20 text-center md:text-left bg-mova-beige text-mova-dark">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-druk uppercase mb-6">About</h2>
+                <p class="text-lg font-neue leading-relaxed">
+                    Dr. Wayne Johnson practices medicine on Hilton Head Island, SC.
+                    Through his years of practice he has developed a program to
+                    encourage and support people of all ages, and especially young
+                    people, in the pursuit of a Joyful Life. Using techniques of
+                    mindfulness this program guides each person through a personal
+                    journey to mitigate anxiety, focus on fulfillment, and find their
+                    way "Back To The Present."
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <footer class="py-6 text-center bg-mova-green text-mova-light font-neue">
+        <p>&copy; 2025 Back To The Present. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenu = document.getElementById("close-menu");
+
+        menuBtn.addEventListener("click", () =>
+            mobileMenu.classList.remove("hidden")
+        );
+        closeMenu.addEventListener("click", () =>
+            mobileMenu.classList.add("hidden")
+        );
+    </script>
+</body>
+
+</html>
