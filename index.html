@@ -13,6 +13,13 @@
     tailwind.config = {
       theme: {
         extend: {
+          screens: {
+            'xs': { 'min': '1px', 'max': '320px' },
+            'sm': { 'min': '321px', 'max': '480px' },
+            'md': { 'min': '481px', 'max': '768px' },
+            'lg': { 'min': '769px', 'max': '1279px' },
+            'xl': { 'min': '1280px' },
+          },
           colors: {
             mova: {
               dark: "#193933",
@@ -33,7 +40,7 @@
   </script>
 
   <!-- Fonts -->
-  <style>
+  <!-- <style>
     @font-face {
       font-family: "DrukRegular";
       src: url("/_nuxt/fonts/DrukCyrMedium.4a5ea75.otf") format("opentype");
@@ -65,30 +72,30 @@
       font-style: normal;
       font-display: swap;
     }
-  </style>
+  </style> -->
+
 </head>
 
 <body class="bg-mova-beige text-mova-dark font-neue">
 
   <!-- HEADER -->
-  <header class="fixed top-0 w-full z-20 bg-mova-dark px-6 py-4 flex items-center justify-between">
-    <!-- <a href="/" class="text-2xl font-druk text-mova-light">BTTP</a> -->
+  <header class="fixed top-0 xs:w-80 w-full z-20 bg-mova-dark px-6 py-4 flex items-center justify-between">
     <a href="/" class="text-2xl font-druk text-mova-light">
       <img src="images/logo1.png" alt="" class="w-[90px] h-[45px]">
     </a>
     <nav class="hidden md:flex space-x-6 text-mova-light font-neue">
       <a href="#home" class="hover:underline">Home</a>
       <a href="about.html" class="hover:underline">About</a>
+      <a href="#events" class="hover:underline">Resources</a>
       <a href="#contact" class="hover:underline">Contact</a>
-      <!-- <a href="#shop" class="hover:underline">Shop</a> -->
-      <a href="#events" class="hover:underline">Events</a>
-
     </nav>
+
     <button id="menu-btn" class="md:hidden flex flex-col space-y-1">
       <span class="w-6 h-0.5 bg-mova-light"></span>
       <span class="w-6 h-0.5 bg-mova-light"></span>
       <span class="w-6 h-0.5 bg-mova-light"></span>
     </button>
+
   </header>
 
   <!-- MOBILE MENU -->
@@ -96,39 +103,34 @@
     class="hidden fixed inset-0 bg-mova-dark text-mova-light flex flex-col items-center justify-center space-y-8 font-neue">
     <a href="#home" class="text-2xl">Home</a>
     <a href="about.html" class="text-2xl">About</a>
-    <a href="#events" class="text-2xl">Events</a>
+    <a href="#events" class="text-2xl">Resources</a>
     <a href="#contact" class="text-2xl">Contact</a>
-    <button id="close-menu" class="absolute top-6 right-6 text-3xl">✕</button>
+    <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
   </div>
 
   <!-- HERO -->
-  <section id="home" class="h-screen flex items-center justify-center text-center bg-mova-dark text-mova-light px-4">
-    <h1 class="text-5xl md:text-7xl font-druk uppercase">
-      <span class="flex flex-col">
-        <span class="text-[130px]">Live A Joyful Life</span>
-        <span class="text-[30px]">Practice Mindfulness to Mitigate Anxiety</span>
-      </span>
-    </h1>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-20 px-6 md:px-20 text-center md:text-left bg-mova-beige text-mova-dark">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-druk uppercase mb-6">About Us</h2>
-      <p class="text-lg font-neue leading-relaxed">
-        Dr. Wayne Johnson practices medicine on Hilton Head Island, SC. Through his years of practice he has developed a
-        program to encourage and support people of all ages, and especially young people, in the pursuit of a Joyful
-        Life.
-        Using techniques of mindfulness this program guides each person through a personal journey to mitigate anxiety,
-        focus on fulfillment, and find their way "Back To The Present."
-      </p>
+  <section id="home"
+    class="h-screen xs:w-80 w-full flex items-center justify-center text-center bg-mova-dark text-mova-light px-4">
+    <div class="">
+      <h1 class="xs:text-3xl md:text-7xl text-5xl font-druk">
+        <span class="flex flex-col">
+          <span class="xs:text-[37px] sm:text-[37px] md:text-[75px] text-[130px] sm:mb-2 md:mb-7 ">Live A Joyful
+            Life</span>
+          <span class="xs:text-[12px] sm:text-[12px] md:text-[20px] text-[30px] uppercase">Practice Mindfulness to
+            Mitigate
+            Anxiety</span>
+        </span>
+      </h1>
     </div>
   </section>
 
   <!-- EVENTS -->
-  <section id="events" class="py-20 px-6 md:px-20 bg-mova-dark text-mova-light">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-druk uppercase mb-12">Events</h2>
+  <section id="events" class="py-20 px-6 bg-mova-dark text-mova-light">
+
+    <div class="xs:w-full ">
+      <!-- container mx-auto text-center -->
+
+      <h2 class="xs:text-center xs:w-full text-4xl font-druk uppercase mb-12">Resources</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="p-6 bg-mova-green rounded-lg shadow-lg">
           <h3 class="text-3xl font-neue font-bold mb-5">The Book</h3>
@@ -147,55 +149,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 px-6 md:px-20 bg-mova-beige text-mova-dark">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-druk uppercase mb-6">Contact Us</h2>
-
-      <div class="flex flex-row justify-between">
-
-        <div class="w-1/2 text-start">
-          <div class="w-[288px]">
-
-            <span class="flex flex-row gap-x-2 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-              </svg>
-              <span>
-                <p>Hilton Head Health and Wellness</p>
-                <p>2 Marshland Road</p>
-                <p>Hilton Head Island, SC 29926</p>
-              </span>
-            </span>
-
-            <span class="flex flex-row gap-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>
-              <a href="tel:843-842-2900" class="text-decoration: underline">
-                843-842-2900
-              </a>
-            </span>
-          </div>
-        </div>
-        <form class="w-1/2 grid gap-4 font-neue">
-          <input type="text" placeholder="Your Name" class="px-4 py-2 rounded text-black shadow-lg" />
-          <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black shadow-lg" />
-          <textarea placeholder="Message" rows="4" class="px-4 py-2 rounded text-black shadow-lg"></textarea>
-          <button type="submit" class="px-6 py-3 bg-mova-dark text-mova-light font-druk rounded">Send</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-6 text-center bg-mova-green text-mova-light font-neue text-sm">
-    <p>&copy; 2025 Back To The Present. All rights reserved.</p>
-  </footer>
 
   <!-- JS -->
   <script>
@@ -203,8 +156,15 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenu = document.getElementById('close-menu');
 
-    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-    closeMenu.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      menuBtn.classList.add('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden')
+      menuBtn.classList.remove('hidden');
+    });
   </script>
 </body>
 
