@@ -22,10 +22,10 @@
           },
           colors: {
             mova: {
-              dark: "#193933",
-              green: "#245949",
-              beige: "#faf7f0",
-              light: "#f7f6f3"
+              text: "#f7f6f3",
+              background: "#349442",
+              forground: "#c7f5d5",
+              accent: "#f3edf5"
             }
           },
           fontFamily: {
@@ -38,6 +38,12 @@
       }
     }
   </script>
+
+  <style>
+    .foo-gradient {
+      background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, rgba(243, 237, 245, 1) 78%);
+    }
+  </style>
 
   <!-- Fonts -->
   <!-- <style>
@@ -110,7 +116,7 @@
 
   <!-- HERO -->
   <section id="home"
-    class="h-screen xs:w-80 w-full flex items-center justify-center text-center bg-mova-dark text-mova-light px-4">
+    class="h-screen xs:w-80 w-full flex items-center justify-center text-center foo-gradient text-gray-700 px-4">
     <div class="">
       <h1 class="xs:text-3xl md:text-7xl text-5xl font-druk">
         <span class="flex flex-col">
