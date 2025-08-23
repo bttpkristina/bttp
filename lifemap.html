@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTTP</title>
+    <link rel="icon" href="/fav.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/xtw4fut.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/times-new-roman">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'sm': { 'min': '1px', 'max': '480px' },
+                        'md': { 'min': '481px', 'max': '768px' },
+                        'lg': { 'min': '769px', 'max': '1279px' },
+                        'xl': { 'min': '1280px', 'max': '1536px' },
+                        'xl2': { 'min': '1537px', 'max': '1920px' },
+                    },
+                    colors: {
+                        mova: {
+                            text: "#f7f6f3",
+                            background: "#349442",
+                            forground: "#c7f5d5",
+                            accent: "#f3edf5"
+                        }
+                    },
+                    fontFamily: {
+                        cooperblack: ["CooperBlack", "serif"],
+                        timesnewroman: ["Times New Roman", "sans-serif"],
+
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .navbar-solid {
+            background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, rgba(204, 234, 252, 1) 89%);
+        }
+
+        .foo-gradient {
+            background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, rgba(204, 234, 252, 1) 89%);
+        }
+
+        .bg-gradient {
+            background: linear-gradient(185deg, rgba(204, 234, 252, 1) 0%, rgba(240, 255, 246, 1) 61%);
+        }
+    </style>
+</head>
+
+<body class="flex-col min-h-screen bg-gradient ">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 xs:w-80 w-full bg-opacity-25 foo-gradient px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-druk text-mova-light">
+            <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
+        </a>
+        <nav class="sm:hidden flex space-x-6 text-mova-light font-neue">
+            <a href="/" class="hover:underline">Home</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="#events" class="hover:underline">Resources</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="sm:flex sm:flex-col hidden space-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-neue">
+        <a href="/" class="text-2xl">Home</a>
+        <a href="about.html" class="text-2xl">About</a>
+        <a href="#events" class="text-2xl">Resources</a>
+        <a href="#contact" class="text-2xl">Contact</a>
+        <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
+    </div>
+
+    <section class="grow">
+
+        <section
+            class="mt-[100px] xs:w-80 w-full flex items-center justify-center text-center text-gray-700 px-4 bg-green-400">
+            <h1
+                class="sm:text-2xl md:text-3xl lg:text-4xl text-5xl font-cooperblack w-full text-center font-semibold uppercase">
+                The Life Map</h1>
+        </section>
+
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="py-6 text-center bg-mova-green text-mova-light font-neue text-sm">
+        <p>&copy; 2025 Back To The Present. All rights reserved.</p>
+    </footer>
+
+
+    <!-- JS -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            menuBtn.classList.add('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden')
+            menuBtn.classList.remove('hidden');
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
