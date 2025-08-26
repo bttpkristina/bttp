@@ -56,9 +56,40 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
-<body>
-    <div class="flex h-screen">
-        <!-- Sidebar -->
+<body class="flex flex-col min-h-screen bg-gradient justify-between">
+
+    <header class="xs:w-80 w-full max-h-1/12 bg-opacity-25 foo-gradient px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-2xl font-druk text-mova-light">
+            <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
+        </a>
+        <nav class="sm:hidden flex space-x-6 text-mova-light font-neue">
+            <a href="/" class="hover:underline">Home</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="index.html#resources" class="hover:underline">Resources</a>
+            <a href="index.html#contact" class="hover:underline">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="sm:flex sm:flex-col hidden space-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-neue">
+        <a href="/" class="text-2xl">Home</a>
+        <a href="about.html" class="text-2xl">About</a>
+        <a href="#events" class="text-2xl">Resources</a>
+        <a href="#contact" class="text-2xl">Contact</a>
+        <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
+    </div>
+
+    <main class="flex flex-1 gap-x-4 bg-gray-100 px-5 py-5 h-8/12">
+
+        <!-- Sidenav -->
         <aside class="w-80 bg-white shadow-md p-4">
             <h2 class="text-xl font-bold mb-4">The Process</h2>
             <ul class="space-y-2">
@@ -77,53 +108,114 @@
             </ul>
         </aside>
 
-        <!-- Main content -->
-        <main class="flex-1 p-8">
-            <div id="content" class="bg-white shadow rounded p-6 min-h-[300px]">
-                <h1 class="text-3xl font-bold text-center font-timesnewroman">Exercises for Improved Consciousness</h1>
+        <!-- Page content -->
+        <div class="flex-1 bg-white shadow rounded overflow-y-auto">
+            <div id="content" class=" overflow-y-scroll p-6">
+                <h1 class="text-3xl font-bold text-center font-timesnewroman">Exercises for Improved Consciousness
+                </h1>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold'>Mindfulness has been proven to increase happiness and well-being, improve emotional regulation and cognitive focus.</span> As well, mindfulness has been proven to be a wonderful therapeutic approach to dealing with anxiety and other mood disorders.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>These emotional distractions are exhausting us by consuming time and energy we could have spent enjoying life.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>By introducing these exercises into your thought processes, you should be able to minimize the suffering that anxiety creates for you.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold'>Mindfulness has
+                        been proven to increase happiness and well-being, improve emotional regulation and cognitive
+                        focus.</span> As well, mindfulness has been proven to be a wonderful therapeutic approach to
+                    dealing with anxiety and other mood disorders.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>These emotional distractions are exhausting
+                    us
+                    by consuming time and energy we could have spent enjoying life.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>By introducing these exercises into your
+                    thought processes, you should be able to minimize the suffering that anxiety creates for you.
+                </p>
                 <br>
                 <h2 class='text-xl text-gray-600 font-bold font-timesnewroman'>Reflective Questions:</h2>
                 <ul class='list-disc ml-10 mt-2 text-gray-600 font-timesnewroman'>
-                <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>Do you find worry, fear or dread occupying your consciousness as you create simulation of your own future?</p>
-                <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>How often does frustration, disappointment, resentment or anger towards someone distract you from enjoying the moment?</p>
-                <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>How often do burdensome thoughts and feelings resulting from mistakes you may have made in the past occupy your mind?</p>
+                    <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>Do you find worry, fear or dread
+                        occupying
+                        your consciousness as you create simulation of your own future?</p>
+                    <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>How often does frustration,
+                        disappointment, resentment or anger towards someone distract you from enjoying the moment?
+                        </p>
+                    <li class='mt-2 text-gray-600 font-timesnewroman text-xl'>How often do burdensome thoughts and
+                        feelings resulting from mistakes you may have made in the past occupy your mind?</p>
                 </ul>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Finding yourself ruminating in regret, remorse, guilt or even shame.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>What about feeling a lack of confidence, positivity, security and optimism when having to make decisions?</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Finding yourself ruminating in regret,
+                    remorse,
+                    guilt or even shame.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>What about feeling a lack of confidence,
+                    positivity, security and optimism when having to make decisions?</p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>If you struggle with choice, to make decisions, these exercises will help you become more aware of the distractions that lead to this ambivalence. Strengthening your emotional muscle, by providing you some simple tools of mindfulness to overcome such burdens.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Eventually, with some work, these exercises will make you more mindful of the only moment of life you can enjoy, the present one.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>If you struggle with choice, to make
+                    decisions,
+                    these exercises will help you become more aware of the distractions that lead to this
+                    ambivalence.
+                    Strengthening your emotional muscle, by providing you some simple tools of mindfulness to
+                    overcome
+                    such burdens.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Eventually, with some work, these exercises
+                    will make you more mindful of the only moment of life you can enjoy, the present one.</p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>With minimal effort, these exercises can be added to your day. They are acknowledgement exercises that will help you become more mindful of who it is you desire to be.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold italic'>You want to be joyful, remind yourself of what makes you joyful!</span></p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>With minimal effort, these exercises can be
+                    added to your day. They are acknowledgement exercises that will help you become more mindful of
+                    who
+                    it is you desire to be.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold italic'>You want
+                        to
+                        be joyful, remind yourself of what makes you joyful!</span></p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>These exercises will help you become more aware of what you are doing, feeling and thinking in every moment.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>This will dramatically improve your well-being, by helping you access the inherent tools that have been provided to you at birth, allowing you to be present and make good decisions.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>By <span class='font-semibold italic'>practicing these exercises</span>, you will be giving yourself the greatest opportunity to achieve self-awareness. Not only aware of what it is you are doing, feelings and thinking, but as well, aware of how, what you are doing, feeling and thinking impacts others.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>These exercises will help you become more
+                    aware
+                    of what you are doing, feeling and thinking in every moment.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>This will dramatically improve your
+                    well-being,
+                    by helping you access the inherent tools that have been provided to you at birth, allowing you
+                    to be
+                    present and make good decisions.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>By <span
+                        class='font-semibold italic'>practicing these exercises</span>, you will be giving yourself
+                    the
+                    greatest opportunity to achieve self-awareness. Not only aware of what it is you are doing,
+                    feelings
+                    and thinking, but as well, aware of how, what you are doing, feeling and thinking impacts
+                    others.
+                </p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>When not distracted by anxiety, you will be able to reach not only what it is you are capable of intellectually, but intuitively as well.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Providing you access to the knowledge that permits you to have not only what it is you need and want, but what it is you desire as well.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Mindfulness can help you focus your attentive effort upon being emotionally responsible to yourself and others, resulting in significantly more joyful relationships.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>When not distracted by anxiety, you will be
+                    able to reach not only what it is you are capable of intellectually, but intuitively as well.
+                </p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Providing you access to the knowledge that
+                    permits you to have not only what it is you need and want, but what it is you desire as well.
+                </p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>Mindfulness can help you focus your
+                    attentive
+                    effort upon being emotionally responsible to yourself and others, resulting in significantly
+                    more
+                    joyful relationships.</p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>What follows are some examples of mindfulness exercises that can be applied into a practice.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>A practice that you can expand upon later at your own rate.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>It is imperative that you become more aware of who it is you are capable of being, intuitively as well as intellectually.</p>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>This knowledge is built into our subconscious mind and awaits our awareness.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>What follows are some examples of
+                    mindfulness
+                    exercises that can be applied into a practice.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>A practice that you can expand upon later
+                    at
+                    your own rate.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>It is imperative that you become more aware
+                    of
+                    who it is you are capable of being, intuitively as well as intellectually.</p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'>This knowledge is built into our
+                    subconscious
+                    mind and awaits our awareness.</p>
                 <br>
-                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold italic'>Let’s learn how to experience a more joyful life.</span></p>
+                <p class='mt-2 text-gray-600 font-timesnewroman text-xl'><span class='font-semibold italic'>Let’s
+                        learn
+                        how to experience a more joyful life.</span></p>
             </div>
-            <!-- <div class="mt-6 flex gap-4">
-                <button id="prevBtn" class="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-                    disabled>Previous</button>
-                <button id="nextBtn" class="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-                    disabled>Next</button>
-            </div> -->
-        </main>
-    </div>
+        </div>
+
+
+
+    </main>
+
+    <footer class="w-full max-h-1/12 bg-opacity-25 foo-gradient px-6 py-4 text-center">
+        this is a footer
+    </footer>
+
 
     <script>
 
