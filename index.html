@@ -110,6 +110,7 @@
     <section id="resources" class="my-10 p-10">
       <h2
         class="sm:text-2xl md:text-3xl lg:text-4xl text-5xl font-cooperblack w-full text-center font-semibold uppercase py-10 px-8">
+        Gallery
       </h2>
       <div class="flex justify-center items-center">
         <iframe class="shadow-2xl rounded-lg" width="800" height="490"
@@ -136,10 +137,10 @@
               with greater
               balance and joy—coming to you in our <span class="font-semibold">upcoming book release</span>.</p>
           </span>
-          <button
-            class="w-full mt-auto px-4 py-2 bg-green-600 sm:text-sm md:text-base text-gray-100 font-semibold rounded">Coming
-            Soon!
-          </button>
+          <a href="book.html"
+            class="w-full mt-auto px-4 py-2 bg-green-600 sm:text-sm md:text-base text-center text-gray-100 font-semibold rounded">The
+            Coming
+            Soon!</a>
         </div>
 
         <div class="flex flex-col w-72 h-80 p-6 foo-gradient rounded-lg shadow-lg">
@@ -213,9 +214,12 @@
           </span>
         </div>
         <form class="w-full grid gap-4 sm:text-sm">
-          <input type="text" placeholder="Your Name" class="px-4 py-2 rounded text-black shadow-lg" />
-          <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black shadow-lg" />
-          <textarea placeholder="Message" rows="4" class="px-4 py-2 rounded text-black shadow-lg"></textarea>
+          <input type="text" placeholder="Your Name"
+            class="px-4 py-2 rounded text-black shadow-lg focus:outline-none" />
+          <input type="email" placeholder="Your Email"
+            class="px-4 py-2 rounded text-black shadow-lg focus:outline-none" />
+          <textarea placeholder="Message" rows="4"
+            class="px-4 py-2 rounded text-black shadow-lg resize-none focus:outline-none"></textarea>
           <button type="submit" class="px-6 py-3 bg-blue-500 text-xl text-gray-200 font-semibold rounded">Send</button>
         </form>
       </div>
@@ -229,22 +233,28 @@
   <!-- FOOTER -->
   <footer class="py-6 text-center text-sm">
 
-    <div class="flex sm:flex-col justify-center sm:items-center ">
+    <div class="flex sm:flex-col justify-between sm:items-center my-10">
 
-      <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
-
-      <div class="flex flex-col items-start sm:text-xs">
-        <a href="/">Home</a>
-        <a href="about.html">About</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
+      <div class="w-1/2">
+        <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
       </div>
 
-      <div class="flex flex-col items-start sm:text-xs">
-        <a href="about.html">The Book</a>
-        <a href="lifemap.html">The Life Map</a>
-        <a href="exercise.html">The Process</a>
+      <div class="w-1/2 flex flex-row justify-inbetween gap-x-10">
+
+        <div class="flex flex-col items-start sm:text-xs">
+          <a href="/" class="hover:underline">Home</a>
+          <a href="about.html" class="hover:underline">About</a>
+          <a href="#resources" class="hover:underline">Resources</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+
+        <div class="flex flex-col items-start sm:text-xs">
+          <a href="book.html" class="hover:underline">The Book</a>
+          <a href="lifemap.html" class="hover:underline">The Life Map</a>
+          <a href="exercise.html" class="hover:underline">The Process</a>
+        </div>
       </div>
+
     </div>
     <p>&copy; 2025 Back To The Present. All rights reserved.</p>
   </footer>
