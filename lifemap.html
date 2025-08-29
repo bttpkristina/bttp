@@ -102,6 +102,8 @@
     </div>
 
     <main class="max-h-[569px] flex flex-1 gap-x-3 bg-gray-100 px-5 py-5 h-8/12">
+
+
         <!-- Sidenav -->
         <aside class="sm:hidden w-80 bg-white shadow-md p-4">
             <h2 class="text-xl font-bold mb-4">The Process</h2>
@@ -131,7 +133,19 @@
         </aside>
 
         <!-- Page content -->
-        <div class="flex-1 bg-white shadow rounded overflow-y-auto">
+        <div class="flex-1 sm:flex-col bg-white shadow rounded overflow-y-auto">
+            <div class="w-64 mx-auto">
+                <select name="" id="life_map_chapters"
+                    class="w-64 mt-3 px-2 py-3 border rounded focus:outline-none sm:text-sm">
+                    <option value="">Select Chapters</option>
+                    <option value="chapter1">CHAPTER 1 - Three Gifts</option>
+                    <option value="chapter2">CHAPTER 2 - Limited Resources</option>
+                    <option value="chapter3">CHAPTER 3 - Manifestations</option>
+                    <option value="chapter4">CHAPTER 4 - Unique Abilities</option>
+                    <option value="chapter5">CHAPTER 5 - Agreements</option>
+                    <option value="chapter6">CHAPTER 6 - Obligations</option>
+                </select>
+            </div>
             <div id="content" class=" bg-white shadow rounded p-6 min-h-[300px]">
                 <h1 class="sm:text-xl text-3xl font-bold text-center font-arial">Back to the Present</h1>
                 <h2 class="sm:text-xl text-3xl font-bold text-center font-arial">The Life Map</h1>
@@ -438,18 +452,11 @@
 
         function loadPage(page) {
             $('#content').html(pages[page]);
-            // Update history
             if (currentIndex === -1 || historyStack[currentIndex] !== page) {
                 historyStack = historyStack.slice(0, currentIndex + 1);
                 historyStack.push(page);
                 currentIndex++;
             }
-            updateButtons();
-        }
-
-        function updateButtons() {
-            $('#prevBtn').prop('disabled', currentIndex <= 0);
-            $('#nextBtn').prop('disabled', currentIndex >= historyStack.length - 1);
         }
 
         $('.nav-btn').on('click', function () {
@@ -457,21 +464,11 @@
             loadPage(page);
         });
 
-        $('#prevBtn').on('click', function () {
-            if (currentIndex > 0) {
-                currentIndex--;
-                $('#content').html(pages[historyStack[currentIndex]]);
-                updateButtons();
-            }
+        $('#life_map_chapters').on('change', function () {
+            const page = $(this).val();
+            loadPage(page);
         });
 
-        $('#nextBtn').on('click', function () {
-            if (currentIndex < historyStack.length - 1) {
-                currentIndex++;
-                $('#content').html(pages[historyStack[currentIndex]]);
-                updateButtons();
-            }
-        });
     </script>
 </body>
 
