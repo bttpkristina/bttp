@@ -32,8 +32,6 @@
                         }
                     },
                     fontFamily: {
-                        roboto: ["roboto", "serif"],
-                        arimo: ["Times New Roman", "sans-serif"],
                         roboto: ["Roboto", "sans-serif"],
                         arimo: ["Arimo", "sans-serif"],
                     }
@@ -217,8 +215,96 @@
 
         const pages = {
             chapter1: "<div>" +
-                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 1</h1>" +
-                "<h2 class='text-2xl font-bold text-center font-arial'>Limited Resources</h2>" +
+                "<h1 class='sm:text-xl text-2xl font-bold text-center font-roboto'>CHAPTER 1</h1>" +
+                "<h2 class='sm:text-xl text-2xl font-bold text-center font-roboto'>Three Gifts</h2>" +
+                "<br>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arimo sm:text-sm text-xl'>As human beings, we are uniquely blessed with awareness that goes far beyond simple survival. Unlike other animals, we have been entrusted with extraordinary gifts that shape how we live, love, and think. These gifts—<span class='font-semibold'>physical, emotional, and spiritual</span>—form the foundation of our identity and guide us toward a more mindful and intentional life.</p>" +
+                "<br>" +
+                "<hr>" +
+                "<br>" +
+                "<p class='mt-2 text-gray-600 font-semibold font-roboto sm:text-xl text-2xl'>The Life Map</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arimo sm:text-sm text-xl'>We have been provided <span class='font-semibold'>three gifts</span> that we are uniquely aware of. These gifts separate us as human beings from other animals.</p>" +
+
+                "<div class='flex sm:flex-col flex-row gap-x-10'>" +
+                "<div id='lifemapcontent' class='w-1/2 sm:w-full'>" +
+
+                "<p class='mt-2 text-gray-600 font-semibold font-arimo sm:text-sm text-2xl'>1. The Physical Gift</p>" +
+
+                "<p class='mt-2 ml-7 text-gray-600 font-arimo sm:text-sm text-xl'>" +
+                "<span>" +
+                "We first became aware of our physical gifts—providing us an awareness of what it was that we are doing." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+                "<span>" +
+                "So profound, these physical gifts allowed us to live anywhere and eat anything. No other animal can survive in such ecological diversity." +
+                "</span>" +
+                "</p>" +
+                "<br>" +
+
+                "<p class='mt-2 text-gray-600 font-semibold font-arimo sm:text-sm text-2xl'>2. The Emotional Gift</p>" +
+
+                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arimo sm:text-sm text-xl'>" +
+
+                "<span>" +
+                "Next, we became aware of our emotional gift—providing us the ability to be aware of feelings." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "<span>" +
+                "This gave us the capacity to freely choose who it is we desired to love and reproduce with. No other animal can direct the creation of life with free choice." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "<span>" +
+                "However, we were primitive, raw, and yet to be domesticated or understand how to apply loving intention into this world." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "<span>" +
+                "We were in need of some guidance if we were going to make one another better." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "</p>" +
+
+                "<p class='mt-2 text-gray-600 font-semibold font-arimo sm:text-sm text-2xl'>3. The Spiritual Gift</p>" +
+
+                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arimo sm:text-sm text-xl'>" +
+
+                "<span>" +
+                "Fortunately, we were provided a third and final gift—our spiritual gift—providing us an awareness of what we were thinking." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "<span>" +
+                "This gift provided humanity with the necessary guidance to love appropriately. With this knowledge, we could create life in a more idealized image of what we entered the world believing possible." +
+                "</span>" +
+                "<br>" +
+                "<br>" +
+
+                "</p>" +
+
+                "</div>" +
+                "<div class='w-1/2 sm:w-full'>" +
+                "<img src='images/our_gift.png' alt='unique_ability' class='sm:w-[350px] sm:h-[270px] w-[430px] h-[310px]'>" +
+                "</div>" +
+                "</div>" +
+                "<br>" +
+                "<hr>" +
+                "<br>" +
+
+                "<p class='mt-2 text-gray-600 font-arimo sm:text-sm text-xl'>The <span class='font-semibold'>Three Gifts—physical, emotional, and spiritual</span>—set us apart from all other creatures. They are not only blessings but also responsibilities, reminding us to live consciously, to love intentionally, and to think wisely.</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arimo sm:text-sm text-xl'>By understanding and honoring these gifts, we move closer to becoming more mindful and present in each moment of our existence.</p>" +
+                "</div>",
+            chapter2: "<div>" +
+                "<h1 class='sm:text-xl text-2xl font-bold text-center font-arial'>CHAPTER 1</h1>" +
+                "<h2 class='sm:text-xl text-2xl font-bold text-center font-arial'>Limited Resources</h2>" +
                 "<br>" +
                 "<p class='mt-2 text-gray-600 font-semibold'></p>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>In the context of <span class='font-semibold'>Limited Resources</span>, imagine having access to something so vital that your survival depends on it. You are given <span class='font-semibold'>only a finite amount</span>, and you must use it continuously, whether you prefer to or not. Once this resource is gone, your existence, as you know it, would cease to exist. <span class='italic'>How would you choose to use such a precious resource?</span></p>" +
@@ -258,7 +344,29 @@
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Understanding the value of how time and energy influence our existence is a critical step toward becoming more mindful and present. By acknowledging time and energy as <span class='font-semibold'>limited resources</span>, we learn to cherish each moment, align our choices with awareness, and live with greater balance and fulfillment.</p>" +
 
                 "</div>",
-            chapter2: "<div>" +
+            chapter3: "<div>" +
+                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 4</h1>" +
+                "<h2 class='text-2xl font-bold text-center font-arial'>Manifestations</h2>" +
+                "<br>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Our lives are shaped by how we use our time and energy. Every moment offers the opportunity to direct our time and energy with intention. Whether through what we are doing, what we are feeling, or what we are thinking, we have the ability to guide where our energy flows. This awareness allows us to live with greater balance and purpose, reminding us that each decision we make is part of shaping the quality of our existence.</p>" +
+                "<br>" +
+                "<hr>" +
+                "<br>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>If you are aware of the impact that time and energy have upon your life, you should be aware of how you spend your time and energy.</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Every moment of your time and energy is spent upon <span class='font-semibold italic'>only three things:</span></p>" +
+                "<ul class='list-disc ml-6 mt-2 text-gray-600 font-arial'>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are doing,</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are feeling, and</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are thinking.</p>" +
+                "</ul>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>We are aware of this and can freely choose what we would like to do, feel, or think next.</p>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>This is how you manifest your three gifts in each moment of your existence.</p>" +
+                "<br>" +
+                "<hr>" +
+                "<br>" +
+                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>By becoming mindful of what we do, what we feel, and what we think, we awaken the power to manifest our three gifts in every moment of our lives. These choices are not just ordinary—they define the direction of our time and energy, and ultimately the life we create. When we bring awareness to these three gifts, we open ourselves to deeper understanding, greater balance, and a more meaningful way of living. In this awareness, every moment becomes not just a passing experience, but an opportunity to shape a more fulfilling and purposeful life.</p>" +
+                "</div>",
+            chapter4: "<div>" +
                 "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 2</h1>" +
                 "<h2 class='text-2xl font-bold text-center font-arial'>Unique Abilities</h2>" +
                 "<br>" +
@@ -289,65 +397,7 @@
                 "<br>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>The two key abilities that set us apart—<span class='font-semibold'>conscious awareness</span> and <span class='font-semibold'>free choice</span>—grant us the power to be the architects of our own lives. These abilities carry not only opportunity but also responsibility: the decisions we make can either uplift humanity or contribute to its suffering. By practicing mindfulness and self-awareness, we can use these unique gifts to live with intention, create positive impact, and fully embrace each moment of our existence.</p>" +
                 "</div>",
-            chapter1: "<div>" +
-                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 1</h1>" +
-                "<h2 class='text-2xl font-bold text-center font-arial'>Three Gifts</h2>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>As human beings, we are uniquely blessed with awareness that goes far beyond simple survival. Unlike other animals, we have been entrusted with extraordinary gifts that shape how we live, love, and think. These gifts—<span class='font-semibold'>physical, emotional, and spiritual</span>—form the foundation of our identity and guide us toward a more mindful and intentional life.</p>" +
-                "<br>" +
-                "<hr>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 font-semibold font-arial text-2xl'>The Life Map</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>We have been provided <span class='font-semibold'>three gifts</span> that we are uniquely aware of. These gifts separate us as human beings from other animals.</p>" +
 
-                "<div class='flex flex-row gap-x-10'>" +
-                "<div id='lifemapcontent' class='w-1/2'>" +
-
-                "<p class='mt-2 text-gray-600 font-semibold font-arial text-xl'>1. The Physical Gift</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>We first became aware of our physical gifts—providing us an awareness of what it was that we are doing.</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>So profound, these physical gifts allowed us to live anywhere and eat anything. No other animal can survive in such ecological diversity.</p>" +
-                "<p class='mt-2 text-gray-600 font-semibold font-arial text-xl'>2. The Emotional Gift</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>Next, we became aware of our emotional gift—providing us the ability to be aware of feelings.</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>This gave us the capacity to freely choose who it is we desired to love and reproduce with. No other animal can direct the creation of life with free choice.</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>However, we were primitive, raw, and yet to be domesticated or understand how to apply loving intention into this world.</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>We were in need of some guidance if we were going to make one another better.</p>" +
-                "<p class='mt-2 text-gray-600 font-semibold font-arial text-xl'>3. The Spiritual Gift</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>Fortunately, we were provided a third and final gift—our spiritual gift—providing us an awareness of what we were thinking.</p>" +
-                "<p class='mt-2 ml-7 text-gray-600 text-justify font-arial text-xl'>This gift provided humanity with the necessary guidance to love appropriately. With this knowledge, we could create life in a more idealized image of what we entered the world believing possible.</p>" +
-
-                "</div>" +
-                "<div class='w-1/2'>" +
-                "<img src='images/our_gift.png' alt='unique_ability' class='w-[430px] h-[310px]'>" +
-                "</div>" +
-                "</div>" +
-                "<br>" +
-                "<hr>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 font-arial text-xl'>The <span class='font-semibold'>Three Gifts—physical, emotional, and spiritual</span>—set us apart from all other creatures. They are not only blessings but also responsibilities, reminding us to live consciously, to love intentionally, and to think wisely.</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>By understanding and honoring these gifts, we move closer to becoming more mindful and present in each moment of our existence.</p>" +
-                "</div>",
-            chapter4: "<div>" +
-                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 4</h1>" +
-                "<h2 class='text-2xl font-bold text-center font-arial'>Manifestations</h2>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Our lives are shaped by how we use our time and energy. Every moment offers the opportunity to direct our time and energy with intention. Whether through what we are doing, what we are feeling, or what we are thinking, we have the ability to guide where our energy flows. This awareness allows us to live with greater balance and purpose, reminding us that each decision we make is part of shaping the quality of our existence.</p>" +
-                "<br>" +
-                "<hr>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>If you are aware of the impact that time and energy have upon your life, you should be aware of how you spend your time and energy.</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Every moment of your time and energy is spent upon <span class='font-semibold italic'>only three things:</span></p>" +
-                "<ul class='list-disc ml-6 mt-2 text-gray-600 font-arial'>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are doing,</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are feeling, and</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'> • what you are thinking.</p>" +
-                "</ul>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>We are aware of this and can freely choose what we would like to do, feel, or think next.</p>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>This is how you manifest your three gifts in each moment of your existence.</p>" +
-                "<br>" +
-                "<hr>" +
-                "<br>" +
-                "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>By becoming mindful of what we do, what we feel, and what we think, we awaken the power to manifest our three gifts in every moment of our lives. These choices are not just ordinary—they define the direction of our time and energy, and ultimately the life we create. When we bring awareness to these three gifts, we open ourselves to deeper understanding, greater balance, and a more meaningful way of living. In this awareness, every moment becomes not just a passing experience, but an opportunity to shape a more fulfilling and purposeful life.</p>" +
-                "</div>",
             chapter5: "<div>" +
                 "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 5</h1>" +
                 "<h2 class='text-2xl font-bold text-center font-arial'>Agreements</h2>" +
@@ -368,6 +418,7 @@
                 "<br>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>The <span class='font-semibold'>Pledge of Agreements</span> is more than just a daily mantra—it is a reminder of the strength within us to shape our lives with intention. By committing to productivity, peace, and purpose each day, we embrace the fullness of our physical, emotional, and spiritual gifts. This simple practice helps us remain present in the moment, empowering us to live with awareness and fulfillment.</p>" +
                 "</div>",
+
             chapter6: "<div>" +
                 "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 6</h1>" +
                 "<h2 class='text-2xl font-bold text-center font-arial'>Obligations</h2>" +
