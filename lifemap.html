@@ -11,6 +11,7 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -31,9 +32,10 @@
                         }
                     },
                     fontFamily: {
-                        cooperblack: ["CooperBlack", "serif"],
-                        timesnewroman: ["Times New Roman", "sans-serif"],
-
+                        roboto: ["roboto", "serif"],
+                        arimo: ["Times New Roman", "sans-serif"],
+                        roboto: ["Roboto", "sans-serif"],
+                        arimo: ["Arimo", "sans-serif"],
                     }
                 }
             }
@@ -41,19 +43,28 @@
     </script>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
         .navbar-solid {
-            background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, rgba(204, 234, 252, 1) 89%);
+            background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, #cceafc 89%);
         }
 
         .foo-gradient {
-            background: linear-gradient(300deg, rgba(170, 240, 193, 1) 0%, rgba(204, 234, 252, 1) 89%);
+            background: linear-gradient(300deg, #aaf0c1 0%, rgba(204, 234, 252, 1) 89%);
         }
 
         .bg-gradient {
             background: linear-gradient(185deg, rgba(204, 234, 252, 1) 0%, rgba(240, 255, 246, 1) 61%);
         }
-    </style>
 
+        .gallery-gradient {
+            background: linear-gradient(190deg, rgba(170, 240, 193, 1) 0%, rgba(204, 234, 252, 1) 70%);
+        }
+
+        .contact-gradient {
+            background: linear-gradient(0deg, rgba(204, 234, 252, 1) 3%, rgba(170, 240, 193, 1) 55%, rgba(204, 234, 252, 1) 100%);
+        }
+    </style>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -83,67 +94,78 @@
     <!-- MOBILE MENU -->
     <div id="mobile-menu"
         class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-roboto">
-        <a href="/" class="text-2xl">Home</a>
+        <a href="index.html" class="text-2xl">Home</a>
         <a href="about.html" class="text-2xl">About</a>
-        <a href="#events" class="text-2xl">Resources</a>
-        <a href="#contact" class="text-2xl">Contact</a>
+        <a href="index.html#events" class="text-2xl">Resources</a>
+        <a href="index.html#contact" class="text-2xl">Contact</a>
         <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
     </div>
 
     <main class="max-h-[569px] flex flex-1 gap-x-3 bg-gray-100 px-5 py-5 h-8/12">
-
         <!-- Sidenav -->
-        <aside class="w-80 bg-white shadow-md p-4">
+        <aside class="sm:hidden w-80 bg-white shadow-md p-4">
             <h2 class="text-xl font-bold mb-4">The Process</h2>
             <ul class="space-y-2">
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
-                        data-target="chapter1">CHAPTER 1 - Limited Resources</button></li>
+                        data-target="chapter1">CHAPTER 1 - Three Gifts</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
-                        data-target="chapter2">CHAPTER 2 - Unique Abilities</button></li>
+                        data-target="chapter1">CHAPTER 2 - Limited Resources</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
-                        data-target="chapter3">CHAPTER 3 - Three Gifts</button></li>
+                        data-target="chapter4">CHAPTER 3 - Manifestations</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
-                        data-target="chapter4">CHAPTER 4 - Manifestations</button></li>
+                        data-target="chapter2">CHAPTER 4 - Unique Abilities</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter5">CHAPTER 5 - Agreements</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter6">CHAPTER 6 - Obligations</button></li>
 
-                <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
+                <!-- <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter7">Sources of Knowledge</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter8">Elements of Psyche</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter8">Intuitive Identity</button></li>
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
-                        data-target="chapter8">Intuitive Identity</button></li>
+                        data-target="chapter8">Intuitive Identity</button></li> -->
             </ul>
         </aside>
 
         <!-- Page content -->
         <div class="flex-1 bg-white shadow rounded overflow-y-auto">
-            <div id="content" class="bg-white shadow rounded p-6 min-h-[300px]">
-                <h1 class="text-3xl font-bold text-center font-arial">Back to the Present</h1>
-                <h2 class="text-3xl font-bold text-center font-arial">The Life Map</h1>
-                    <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>When my consciousness becomes occupied
-                        by
-                        feelings and thoughts that have nothing to do with the moment I am in, it interferes with my
-                        ability to find the joy available in that moment.</p>
-                    <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>If you would like to find more
-                        joyfulness
-                        in your life, maybe you should learn how to become more mindful and present.</p>
-                    <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>With <span class='font-semibold'>six
-                            simple
-                            understandings</span>, you will learn what is needed to enjoy manifesting your greatest
-                        potential—physically, emotionally, and spiritually.</p>
-                    <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>These six understandings will provide
-                        all
-                        that is needed to achieve greater self-awareness, presenting you with the opportunity to enjoy
-                        life in this and every moment.</p>
-                    <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>After completing the chapters, click
-                        the
-                        <span class='font-semibold'>Exercises</span> button to explore techniques for improved
-                        consciousness and practice mindfulness in daily life.
+            <div id="content" class=" bg-white shadow rounded p-6 min-h-[300px]">
+                <h1 class="sm:text-xl text-3xl font-bold text-center font-arial">Back to the Present</h1>
+                <h2 class="sm:text-xl text-3xl font-bold text-center font-arial">The Life Map</h1>
+
+                    <p class='mt-2 text-gray-600 text-justify font-arial sm:text-base text-xl'>
+                        <span>
+                            When my consciousness becomes occupied by feelings and thoughts that have nothing to do with
+                            the moment I am in, it interferes with my ability to find the joy available in that moment.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                            If you would like to find more joyfulness in your life, maybe you should learn how to become
+                            more mindful and present.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                            With <span class='font-semibold'>six simple understandings</span>, you will learn what is
+                            needed to enjoy manifesting your greatest potential—physically, emotionally, and
+                            spiritually.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                            These six understandings will provide all that is needed to achieve greater self-awareness,
+                            presenting you with the opportunity to enjoylife in this and every moment.
+                        </span>
+                        <br>
+                        <br>
+                        <span>
+                            After completing the chapters, click the <span class='font-semibold'>Exercises</span> button
+                            to explore techniques for improved consciousness and practice mindfulness in daily life.
+                        </span>
                     </p>
             </div>
         </div>
@@ -151,23 +173,22 @@
     </main>
 
     <footer class="pb-6 text-center text-sm">
-
         <div class="flex sm:flex-col justify-between sm:items-center my-10">
 
-            <div class="w-1/2">
+            <div class="w-1/2 sm:mb-5">
                 <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
             </div>
 
-            <div class="w-1/2 flex flex-row justify-inbetween gap-x-10 font-arimo">
+            <div class="w-1/2 flex flex-row justify-inbetween sm:gap-x-2 gap-x-10 font-arimo">
 
-                <div class="flex flex-col items-start sm:text-xs">
+                <div class="sm:w-full flex flex-col items-start sm:text-xs">
                     <a href="/" class="hover:underline">Home</a>
                     <a href="about.html" class="hover:underline">About</a>
                     <a href="#resources" class="hover:underline">Resources</a>
                     <a href="#contact" class="hover:underline">Contact</a>
                 </div>
 
-                <div class="flex flex-col items-start sm:text-xs">
+                <div class="sm:w-full flex flex-col items-start sm:text-xs">
                     <a href="book.html" class="hover:underline">The Book</a>
                     <a href="lifemap.html" class="hover:underline">The Life Map</a>
                     <a href="exercise.html" class="hover:underline">The Process</a>
@@ -177,7 +198,6 @@
         </div>
         <p>&copy; 2025 Back To The Present. All rights reserved.</p>
     </footer>
-
 
     <script>
 
@@ -255,8 +275,8 @@
                 "<br>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>The two key abilities that set us apart—<span class='font-semibold'>conscious awareness</span> and <span class='font-semibold'>free choice</span>—grant us the power to be the architects of our own lives. These abilities carry not only opportunity but also responsibility: the decisions we make can either uplift humanity or contribute to its suffering. By practicing mindfulness and self-awareness, we can use these unique gifts to live with intention, create positive impact, and fully embrace each moment of our existence.</p>" +
                 "</div>",
-            chapter3: "<div>" +
-                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 3</h1>" +
+            chapter1: "<div>" +
+                "<h1 class='text-2xl font-bold text-center font-arial'>CHAPTER 1</h1>" +
                 "<h2 class='text-2xl font-bold text-center font-arial'>Three Gifts</h2>" +
                 "<br>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>As human beings, we are uniquely blessed with awareness that goes far beyond simple survival. Unlike other animals, we have been entrusted with extraordinary gifts that shape how we live, love, and think. These gifts—<span class='font-semibold'>physical, emotional, and spiritual</span>—form the foundation of our identity and guide us toward a more mindful and intentional life.</p>" +
@@ -283,7 +303,7 @@
 
                 "</div>" +
                 "<div class='w-1/2'>" +
-                "<img src='images/.png' alt='unique_ability' class='w-[430px] h-[310px]'>" +
+                "<img src='images/our_gift.png' alt='unique_ability' class='w-[430px] h-[310px]'>" +
                 "</div>" +
                 "</div>" +
                 "<br>" +
