@@ -59,11 +59,42 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
-<body class="bg-gray-100">
-    <div class="flex h-screen">
-        <!-- Sidebar -->
+<body class="flex flex-col min-h-screen bg-gradient justify-between">
+
+    <!-- HEADER -->
+    <header class="xs:w-80 w-full bg-opacity-25 foo-gradient px-6 py-4 flex items-center justify-between">
+        <a href="/"><img src="images/logo2.png" alt="" class="w-[140px] h-[70px]"></a>
+
+        <nav class="sm:hidden flex space-x-6 text-xl font-semibold font-roboto">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="index.html#resources" class="hover:underline">Resources</a>
+            <a href="index.html#contact" class="hover:underline">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="sm:flex sm:flex-col hidden space-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-roboto">
+        <a href="/" class="text-2xl">Home</a>
+        <a href="about.html" class="text-2xl">About</a>
+        <a href="#events" class="text-2xl">Resources</a>
+        <a href="#contact" class="text-2xl">Contact</a>
+        <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
+    </div>
+
+    <main class="max-h-[569px] flex flex-1 gap-x-3 bg-gray-100 px-5 py-5 h-8/12">
+
+        <!-- Sidenav -->
         <aside class="w-80 bg-white shadow-md p-4">
-            <h2 class="text-xl font-bold mb-4">Chapters</h2>
+            <h2 class="text-xl font-bold mb-4">The Process</h2>
             <ul class="space-y-2">
                 <li><button class="nav-btn w-full text-left px-3 py-2 rounded hover:bg-gray-200"
                         data-target="chapter1">CHAPTER 1 - Limited Resources</button></li>
@@ -89,8 +120,8 @@
             </ul>
         </aside>
 
-        <!-- Main content -->
-        <main class="flex-1 p-8">
+        <!-- Page content -->
+        <div class="flex-1 bg-white shadow rounded overflow-y-auto">
             <div id="content" class="bg-white shadow rounded p-6 min-h-[300px]">
                 <h1 class="text-3xl font-bold text-center font-arial">Back to the Present</h1>
                 <h2 class="text-3xl font-bold text-center font-arial">The Life Map</h1>
@@ -114,17 +145,39 @@
                         <span class='font-semibold'>Exercises</span> button to explore techniques for improved
                         consciousness and practice mindfulness in daily life.
                     </p>
-
-                    <!-- <p class="mt-2 text-gray-600">Click an item in the sidebar to load content here.</p> -->
             </div>
-            <!-- <div class="mt-6 flex gap-4">
-                <button id="prevBtn" class="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
-                    disabled>Previous</button>
-                <button id="nextBtn" class="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-                    disabled>Next</button>
-            </div> -->
-        </main>
-    </div>
+        </div>
+
+    </main>
+
+    <footer class="pb-6 text-center text-sm">
+
+        <div class="flex sm:flex-col justify-between sm:items-center my-10">
+
+            <div class="w-1/2">
+                <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
+            </div>
+
+            <div class="w-1/2 flex flex-row justify-inbetween gap-x-10 font-arimo">
+
+                <div class="flex flex-col items-start sm:text-xs">
+                    <a href="/" class="hover:underline">Home</a>
+                    <a href="about.html" class="hover:underline">About</a>
+                    <a href="#resources" class="hover:underline">Resources</a>
+                    <a href="#contact" class="hover:underline">Contact</a>
+                </div>
+
+                <div class="flex flex-col items-start sm:text-xs">
+                    <a href="book.html" class="hover:underline">The Book</a>
+                    <a href="lifemap.html" class="hover:underline">The Life Map</a>
+                    <a href="exercise.html" class="hover:underline">The Process</a>
+                </div>
+            </div>
+
+        </div>
+        <p>&copy; 2025 Back To The Present. All rights reserved.</p>
+    </footer>
+
 
     <script>
 

@@ -58,14 +58,15 @@
 
 <body class="flex flex-col min-h-screen bg-gradient justify-between">
 
+    <!-- HEADER -->
     <header class="xs:w-80 w-full bg-opacity-25 foo-gradient px-6 py-4 flex items-center justify-between">
         <a href="/"><img src="images/logo2.png" alt="" class="w-[140px] h-[70px]"></a>
 
-        <nav class="sm:hidden flex space-x-6 text-xl font-semibold font-timesnewroman">
-            <a href="/" class="hover:text-2xl">Home</a>
-            <a href="about.html" class="hover:text-2xl">About</a>
-            <a href="#resources" class="hover:text-2xl">Resources</a>
-            <a href="#contact" class="hover:text-2xl">Contact</a>
+        <nav class="sm:hidden flex space-x-6 text-xl font-semibold font-roboto">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="about.html" class="hover:underline">About</a>
+            <a href="index.html#resources" class="hover:underline">Resources</a>
+            <a href="index.html#contact" class="hover:underline">Contact</a>
         </nav>
 
         <button id="menu-btn" class="sm:flex sm:flex-col hidden space-y-1">
@@ -78,7 +79,7 @@
 
     <!-- MOBILE MENU -->
     <div id="mobile-menu"
-        class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-neue">
+        class="hidden fixed inset-0 foo-gradient text-gray-700 flex flex-col items-center justify-center space-y-8 font-roboto">
         <a href="/" class="text-2xl">Home</a>
         <a href="about.html" class="text-2xl">About</a>
         <a href="#events" class="text-2xl">Resources</a>
@@ -86,7 +87,7 @@
         <button id="close-menu" class="absolute top-10 right-6 text-3xl">✕</button>
     </div>
 
-    <main class="flex flex-1 gap-x-4 bg-gray-100 px-5 py-5 h-8/12">
+    <main class="max-h-[569px] flex flex-1 gap-x-3 bg-gray-100 px-5 py-5 h-8/12">
 
         <!-- Sidenav -->
         <aside class="w-80 bg-white shadow-md p-4">
@@ -109,15 +110,17 @@
 
         <!-- Page content -->
         <div class="flex-1 bg-white shadow rounded overflow-y-auto">
-            <div id="content" class=" overflow-y-scroll p-6">
+            <div id="content" class="p-6">
                 <h1 class="text-3xl font-bold text-center font-arial">Exercises for Improved Consciousness
                 </h1>
                 <br>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold'>Mindfulness has
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold'>Mindfulness
+                        has
                         been proven to increase happiness and well-being, improve emotional regulation and cognitive
                         focus.</span> As well, mindfulness has been proven to be a wonderful therapeutic approach to
                     dealing with anxiety and other mood disorders.</p>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>These emotional distractions are exhausting
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>These emotional distractions are
+                    exhausting
                     us
                     by consuming time and energy we could have spent enjoying life.</p>
                 <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>By introducing these exercises into your
@@ -148,14 +151,17 @@
                     Strengthening your emotional muscle, by providing you some simple tools of mindfulness to
                     overcome
                     such burdens.</p>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Eventually, with some work, these exercises
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Eventually, with some work, these
+                    exercises
                     will make you more mindful of the only moment of life you can enjoy, the present one.</p>
                 <br>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>With minimal effort, these exercises can be
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>With minimal effort, these exercises can
+                    be
                     added to your day. They are acknowledgement exercises that will help you become more mindful of
                     who
                     it is you desire to be.</p>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold italic'>You want
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold italic'>You
+                        want
                         to
                         be joyful, remind yourself of what makes you joyful!</span></p>
                 <br>
@@ -176,7 +182,8 @@
                     others.
                 </p>
                 <br>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>When not distracted by anxiety, you will be
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>When not distracted by anxiety, you will
+                    be
                     able to reach not only what it is you are capable of intellectually, but intuitively as well.
                 </p>
                 <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>Providing you access to the knowledge that
@@ -194,7 +201,8 @@
                 <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>A practice that you can expand upon later
                     at
                     your own rate.</p>
-                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>It is imperative that you become more aware
+                <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>It is imperative that you become more
+                    aware
                     of
                     who it is you are capable of being, intuitively as well as intellectually.</p>
                 <p class='mt-2 text-gray-600 text-justify font-arial text-xl'>This knowledge is built into our
@@ -211,7 +219,7 @@
 
     </main>
 
-    <footer class="py-6 text-center text-sm">
+    <footer class="pb-6 text-center text-sm">
 
         <div class="flex sm:flex-col justify-between sm:items-center my-10">
 
@@ -219,7 +227,7 @@
                 <img src="images/logo2.png" alt="" class="w-[140px] h-[70px]">
             </div>
 
-            <div class="w-1/2 flex flex-row justify-inbetween gap-x-10 font-timesnewroman">
+            <div class="w-1/2 flex flex-row justify-inbetween gap-x-10 font-arimo">
 
                 <div class="flex flex-col items-start sm:text-xs">
                     <a href="/" class="hover:underline">Home</a>
@@ -241,6 +249,12 @@
 
 
     <script>
+
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+
+        console.log("Screen Width:", screenWidth, "pixels");
+        console.log("Screen Height:", screenHeight, "pixels");
 
         const pages = {
             the_gratitude_alarm: "<div>" +
@@ -317,7 +331,7 @@
             pledge_of_agreements: "<div>" +
                 "<h2 class='text-3xl font-bold text-center font-arial'>Pledge Of Agreements</h2>" +
                 "<br>" +
-                 "<p class='mt-2 ml-4 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold italic'>Say this mantra every morning:</span></p>" +
+                "<p class='mt-2 ml-4 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold italic'>Say this mantra every morning:</span></p>" +
                 "<ul class='list-disc ml-6 mt-2 text-gray-600 font-arial'>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>•	Each and every day, I will use my <span class='font-semibold'>physical gifts</span> to be productive.</p>" +
                 "<p class='mt-2 text-gray-600 text-justify font-arial text-xl'>•	Each and every day, I will use my <span class='font-semibold'>emotional gifts</span> to be at peace in all my relationships.</p>" +
@@ -389,11 +403,11 @@
                 "<br>" +
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>I am consciously aware of what it is that I am doing, feeling and thinking.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Conscious awareness offered humanity the unique ability not only to be conscious, awake and alert like other animals. However, our consciousness offered us much more, presenting us with an opportunity to be aware of what we were doing, feeling and thinking. We would begin to understand the impact time and energy had upon our existence; we could begin to store our past to plan our own future.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>I, as well, am capable of freely choosing,</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Our ability to plan meant we would begin to make decisions that would knowingly impact our life and the life of those we influenced. With this unique ability, we would become aware of the choices we could make freely, storing experiential life in our subconscious mind as memory. We could access these memories later, with our awareness, to make decisions to create a future we desired.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>The opportunity would present itself for us uniquely to freely choose what we would like to do, feel or think next. We would be able to take the reins of our own life, improving upon what was. Creating an improved existence for, not just for oneself, but all of humanity. We could do so, if we so chose, with loving intention, and make this happen.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>how to utilize my time and energy efficiently,</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>In order to improve upon what was, we couldn’t be wasteful of our time and energy. Every bit of our time and energy must have gone into meeting the basic needs of survival, manifesting in our existence in our actions, feelings and thoughts.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Our unique abilities (conscious awareness and free choice) gave us an understanding of how we could use those limited resources of time and energy to influence our lives and the lives of those we cared for. Because these resources were limited, we should aim to use them with great care and efficiency, to get the most out of our existence.</p>" +
@@ -403,7 +417,7 @@
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>To gain the necessary knowledge to migrate all that we could create, would take time and energy; we would need to be patient with ourselves and others, as we learned how to use our newfound gifts. We would need to learn how to care for ourselves, honoring ourselves physically by resting, nourishing and challenging our bodies. We could honor ourselves emotionally by loving ourselves, our friends and family and society appropriately.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>As well, we could honor ourselves spiritually by acknowledging that there is guidance available to us, built into our mind awaiting our access, that we should have faith in when making decisions. Our instincts would guarantee us that our needs could be met.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Our intellect would serve our needs and eventually would serve to satisfy our wants. Our intuition would provide us the necessary knowledge to have what it was we truly desired, good loving relationships with others.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>my unique physical, emotional and spiritual gifts.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>If we could, taking care of the physical gifts by resting, nourishing and challenging ourselves, we would find that we could live on any land mass and eat virtually anything. This would allow mankind the opportunity to relinquish the control evolution had upon our beings. Permitting us to independently make another powerful choice for ourselves. Letting go of this environmental restriction would not be easy.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Once food, shelter and safety were satisfied, there would be only one additional thing we would need to choose to survive; a reproductive partner. Our emotional gift allowed us to choose who we wanted to love and reproduce with. Permitting mankind the opportunity to choose the characteristics and traits of a partner.</p>" +
@@ -411,22 +425,22 @@
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>However, we had no idea how to be responsible to one another. Instinct had provided little beyond meeting need; this would require some guidance. This is where and how our spiritual gift would develop. Providing us the necessary guidance to create improvements to ourselves, our lives and the lives of those we loved.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>We would begin to add to our primitive instincts, by gaining knowledge intellectually and intuitively. This would ease the burden of decision making.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>This is where we were encouraged to have faith in the guidance available to us, having been instructed to spend some time honoring it through acknowledgement exercises like prayer, meditation and affirmations.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>Continually challenging myself to be productive, be at peace and fulfill purpose;</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>If we wanted to be present, we would need to work hard, challenging ourselves physically to be productive. We would need to challenge ourselves emotionally, to be at peace in all our relationships. And, we would need to challenge ourselves spiritually to use the guidance available to us to make decisions to fulfill purpose with our time and energy. To improve upon what was, would require decisions to be made with loving intention.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>having faith that the guidance I receive</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>The knowledge that we have gained, both intellectually and intuitively are learned through different means. Our intellect is learned knowingly, applying our attentive effort to gain such knowledge helps us to be the best athlete, artist, engineer or scientist.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>This requires study and practice. However, our intuitive understandings are learned best by observation. When we witness someone communicating well, and see them joyful, we say to ourselves, <span class='italic'>“I want to be more like that.”</span>  Thus, communication, faith, empathy and sacrifice are the amazingly powerful tools of intuition. They help us to share knowledge, describing how we should use our social, spiritual, emotional, and nurturing forms of intuitive knowledge to make one another better.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>These intuitive understandings need to be practiced as well. The obligations described above work to force us to keep this understanding in the present moment.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>will allow me to experience the joy available in my relationships with those I love</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Using the available guidance, in the form of knowledge can be quite burdensome if not balanced. Our intellect, or the tree of knowledge, can be quite tempting. As long as mankind creates what it is we want, we will forever believe that the newest, latest and greatest thing will make us happy. However, happiness is always temporary and fleeting.</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Our intellect will brilliantly just continue to create more and more for us to want. When being mindful and present, we realize that our joy in life doesn’t come from having what it is we want, it comes from our relationships with one another. This is where our intuitive knowledge intended to keep a balance. Curbing our egos and incessant longing to prove how great we are by having everything we want. Intuition provides us insight into how to have loving relationships with one another.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>ultimately allowing me not to be distracted from the present</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>When we are being physically productive, emotionally at peace in our relationships and fulfilling purpose with our decisions, we find ourselves being present, not distracted by anxiety in the moment of life we are living.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial italic'>so that I can enjoy each and every moment of my existence!</p>" +
                 "<p class='mt-2 ml-1 text-gray-600 text-justify font-arial text-xl'>Being present and mindful allows us to use our physical, emotional and spiritual gifts fully. Our unique abilities allow us to be aware of what we are doing, feeling and thinking and to freely choose what we would like to do, feel or think next. Using our time and energy in this manner allows us to make a choice: whether or not to enjoy each and every moment of our existence.</p>" +
                 "<br>" +
@@ -448,7 +462,7 @@
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>No, what we desire most is the <span class='font-semibold'>joy that comes from good, loving relationships with others.</span> Simplify your choices to those that satisfy your truest desires, and watch your anxiety lessen.</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>If you find yourself distracted by too many choices—acknowledge that humanity has created endless possibilities, exhausting our minds. From peanut butter to television channels, our complexity of choice overwhelms.</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>Somehow, we believe if we have what we want, we’ll be happy—only to discover joy doesn’t come from satisfying wants. That chase is insatiable. True joy comes from relationships.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial'>2. Future Perceptions</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>If you find yourself distracted by feelings and thoughts about the future—</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold'>Remember:</span> as hard as we may try, we were not given the ability to predict the future. When these thoughts occupy our consciousness, we cannot enjoy the moment we are in.</p>" +
@@ -471,7 +485,7 @@
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold'>Take a moment to reflect:</span><span class='italic'>What emotions, behaviors, or responses caused this suffering? Were you—or they—not patient, considerate, or honest? Was there disrespect, or a lack of remorse?</span></p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>Now, ask yourself what you can do better next time. Work on what you alone can change, and release what you cannot control.</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'><span class='font-semibold'>Remember again:</span> forgiveness is a commitment. By forgiving, you choose not to suffer. Protect your relationships—they are the source of your deepest joy.</p>" +
-                
+
                 "<p class='mt-2 text-xl text-gray-600 font-bold font-arial'>5. Lack of Love of Self</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>If you find yourself distracted by thoughts that harm how you see yourself—</p>" +
                 "<p class='mt-2 ml-2 text-gray-600 text-justify font-arial text-xl'>Acknowledge that lacking confidence, optimism, or security in your decisions will always produce anxiety.</p>" +
